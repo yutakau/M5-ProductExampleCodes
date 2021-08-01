@@ -55,7 +55,8 @@ void setup() {
 	  Serial.printf("SDCard Type = %d \r\n",Type);
 	  Serial.printf("SDCard Size = %d \r\n" , (int)(SD.cardSize()/1024/1024));
 
-    M5.dis.fillpix(0x00004f);
+    //M5.dis.fillpix(0x00004f);
+    M5.dis.drawpix(0, 0x00004f);
     
     Serial1.begin(9600,SERIAL_8N1,22,-1);
     SerialBT.begin(chipname);
